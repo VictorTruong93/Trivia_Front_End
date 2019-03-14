@@ -14,8 +14,8 @@ html, body{
 }
 
 .trivia-box {
-    height:80%;
-    width:100%;
+    height: 80%;
+    width: 100%;
     background-color: orange;
     display: flex;
     flex-direction: column;
@@ -30,4 +30,61 @@ html, body{
     background-color: green;
     margin-left: 25%;
     margin-right: 25%;
+}
+
+.answers {
+    border: 5px solid black;
+    display:flex;
+    flex-direction: row;
+}
+
+.buttonA {
+    height:20%;
+    width: 20%;
+    background-color: white;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    /* margin: 25%; */
+}
+.buttonB {
+    height:20%;
+    width: 20%;
+    background-color: white;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+}
+.buttonC {
+    height:20%;
+    width: 20%;
+    background-color: white;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+}
+.buttonD {
+    height:20%;
+    width: 20%;
+    background-color: white;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+}
+
+
+
+
+
+.title {
+    height: 10%;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    flex-direction: center;
+}
+
+.selector {
+    height: 10%;
+    width: 75%;
 }
