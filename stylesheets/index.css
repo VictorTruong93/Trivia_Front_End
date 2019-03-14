@@ -36,7 +36,7 @@ this is the select category box, dropdown menu on webpage
 .question,
 .answers,
 .buttons {
-    height: 20%;
+    height: 30%;
     width: 50%;
     background-color: green;
     margin-left: 25%;
@@ -44,45 +44,49 @@ this is the select category box, dropdown menu on webpage
 }
 
 .answers {
+    background-color: beige;
     border: 5px solid black;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .buttonA {
-    height:20%;
-    width: 20%;
-    background-color: white;
+    height:25%;
+    width: 100%;
+    background: cyan;
     display: flex;
     /* flex-direction: row; */
-    justify-content: space-around;
+    justify-content: flex-start;
     /* margin: 25%; */
 }
 .buttonB {
-    height:20%;
-    width: 20%;
-    background-color: white;
+    height:25%;
+    width: 100%;
     display: flex;
     /* flex-direction: row; */
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 .buttonC {
-    height:20%;
-    width: 20%;
-    background-color: white;
+    height:25%;
+    width: 100%;
     display: flex;
     /* flex-direction: row; */
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 .buttonD {
-    height:20%;
-    width: 20%;
-    background-color: white;
+    height:25%;
+    width: 100%;
     display: flex;
     /* flex-direction: row; */
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
+.Enter {
+    height: 20%;
+    width: 20;
+    align-self: flex-end;
+}
 
 
 
