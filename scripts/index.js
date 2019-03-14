@@ -6,3 +6,4 @@ function getQs(url) {
         console.log(response.json());
     })
 }
+
