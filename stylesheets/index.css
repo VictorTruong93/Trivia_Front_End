@@ -106,8 +106,3 @@ this is the select category box, dropdown menu on webpage
     display: flex;
     flex-direction: center;
 }
-
-.selector {
-    height: 10%;
-    width: 75%;
-}
