@@ -26,5 +26,16 @@ function getData(url){
         triviaGame.push(myQuestion, myAnswer, myNonAnswer)
         return triviaGame
     })
+    .then(drawQuestionsToPage)
+    .then(drawAswersToPage)
 }
+
+function drawQuestionsToPage(triviaData){
+    console.log(triviaData);
+    let questionDiv = document.querySelector('[data-question]');
+    questionDiv.textContent = '';
+    // console.log(questionDiv);
+    questionDiv.textContent = triviaData[0];
+};
+
 
