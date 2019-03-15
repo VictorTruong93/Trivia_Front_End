@@ -3,43 +3,27 @@ let scienceURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com
 let data = [];
 let triviaGame = [];
 
-//we need a function that will grab the questions for us
-function getMyTriviaData(findMyTrivia){
-    let myQuestion = findMyTrivia.data[0].question;
-    let correctAnswer = findMyTrivia.data[0].correct_answer;
-    let incorrectAnswers = findMyTrivia.data[0].incorrect_answers;
-    console.log(myQuestion)
-
-    triviaGame.append(myQuestion)
-    return myQuestion, correctAnswer, incorrectAnswers;   
-
-}
-
-// //we need a function that will grab the answers for us
-// function getMyAnswer(findCorrectAnswer){
-//     let correctAnswer = findCorrectAnswer.results[0].correct_answer;
-//     return correctAnswer;
-// };
-
-// function getMyFakes(findIncorrectAnswers){
-//     let incorrectAnswers = findIncorrectAnswers.results[0].incorrect_answers;
-//     return incorrectAnswers;
-// };
-// function main(){
-//     getMyQuestion();
-//     getMyAnswer();
-//     getMyFakes();
-// };
-
-function getQs(url) {
-    //fetchs our API data
+function getData(url){
     fetch(url)
-    .then(function(response) {
-        //returns the API data as JSON
-        // return response.json();
+    .then(function(response){
         let data = response.json();
         console.log(data);
         return data;
     })
-    getMyTriviaData(data);
-};
+    .then(function (data){
+        resultsArray = data.results;
+        console.log(resultsArray);
+        return resultsArray
+        // console.log(Object.results(data));
+    })
+    .then(function (resultsArray){
+        let myQuestion = resultsArray[0].question;
+        // console.log(myQuestion);
+        let myAnswer = resultsArray[0].correct_answer;
+        // console.log(myAnswer);
+        let myNonAnswer = resultsArray[0].incorrect_answers;
+        // console.log(myNonAnswer);
+        triviaGame.push(myQuestion, myAnswer, myNonAnswer)
+        return triviaGame
+    })
+}
