@@ -1,7 +1,7 @@
 let scienceURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=17&difficulty=easy&type=multiple";
 
 let data = [];
-let triviaGame = [];
+let answers = [];
 
 function getData(url){
     fetch(url)
@@ -14,9 +14,12 @@ function getData(url){
 
 
 function accumulateData(grabData) {
+    answers = []
     console.log(grabData.results[0]);
     let infoData = grabData.results[0];
-
+    incorrect = infoData.incorrect_answers
+    incorrect.push(infoData.correct_answer)
+    answers.push(incorrect)
     drawQuestionsToPage(infoData);
 }
 
@@ -27,7 +30,11 @@ function drawQuestionsToPage(grabQuestion) {
 
     questionBoxDiv.textContent= `Question: ${grabQuestion.question}`;
     questionDiv.append(questionBoxDiv);
+    console.log(answers)
+    console.log(shuffle(answers))
+
 }
+
 
 
 
