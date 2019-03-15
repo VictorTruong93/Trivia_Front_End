@@ -17,6 +17,7 @@ function getData(url){
         // console.log(Object.results(data));
     })
     .then(function (resultsArray){
+        delete triviaGame[triviaGame.length];
         let myQuestion = resultsArray[0].question;
         // console.log(myQuestion);
         let myAnswer = resultsArray[0].correct_answer;
@@ -26,5 +27,12 @@ function getData(url){
         triviaGame.push(myQuestion, myAnswer, myNonAnswer)
         return triviaGame
     })
+    .then(drawQuestionsToPage(triviaGame))
 }
 
+
+function drawQuestionsToPage(triviaData){
+    console.log(triviaData);
+    let questionArea = document.querySelector('[data-question]');
+    questionArea.textContent = triviaData[0];
+}
