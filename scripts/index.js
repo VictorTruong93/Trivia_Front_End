@@ -1,9 +1,30 @@
-const scienceURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=20&category=17&difficulty=easy&type=multiple";
+let scienceURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=17&difficulty=easy&type=multiple";
 
-function getQs(url) {
+let data = [];
+let triviaGame = [];
+
+function getData(url){
     fetch(url)
-    .then(function(response) {
-        console.log(response.json());
+    .then(function(response){
+        let data = response.json();
+        console.log(data);
+        return data;
+    })
+    .then(function (data){
+        resultsArray = data.results;
+        console.log(resultsArray);
+        return resultsArray
+        // console.log(Object.results(data));
+    })
+    .then(function (resultsArray){
+        let myQuestion = resultsArray[0].question;
+        // console.log(myQuestion);
+        let myAnswer = resultsArray[0].correct_answer;
+        // console.log(myAnswer);
+        let myNonAnswer = resultsArray[0].incorrect_answers;
+        // console.log(myNonAnswer);
+        triviaGame.push(myQuestion, myAnswer, myNonAnswer)
+        return triviaGame
     })
 }
 
