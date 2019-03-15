@@ -11,6 +11,7 @@ function getData(url){
             return data;
         })
         .then(accumulateData)
+        .then(shuffle)
 }
 
 
@@ -18,10 +19,12 @@ function accumulateData(grabData) {
     answers = []
     console.log(grabData.results[0]);
     let infoData = grabData.results[0];
-    incorrect = infoData.incorrect_answers
-    incorrect.push(infoData.correct_answer)
-    answers.push(incorrect)
+    incorrect = [...infoData.incorrect_answers];
+    incorrect.push(infoData.correct_answer);
+    answers = [...incorrect];
     drawQuestionsToPage(infoData);
+    console.log(answers)
+    return [...answers]
 }
 
 function drawQuestionsToPage(grabQuestion) {
@@ -31,9 +34,28 @@ function drawQuestionsToPage(grabQuestion) {
 
     questionBoxDiv.textContent= `Question: ${grabQuestion.question}`;
     questionDiv.append(questionBoxDiv);
-    console.log(answers)
-    console.log(shuffle(answers))
 
+}
+
+//the Fisher-Yates Shuffle function!
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    
+    console.log(array);
+    return array;
 }
 
 
