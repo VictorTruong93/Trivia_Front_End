@@ -1,6 +1,6 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 *, *:before, *:after {
 box-sizing: inherit;
@@ -9,7 +9,7 @@ box-sizing: inherit;
 html, body{
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.1);
+    background-color: black;
     font-size: 20px;
 }
 
@@ -24,10 +24,16 @@ this is the select category box, dropdown menu on webpage
     justify-content: center;
 }
 
+.headTitle {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
 .trivia-box {
     height: 80%;
     width: 100%;
-    background-color: orange;
+    background-image: url("trivia.jpg");
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -38,14 +44,18 @@ this is the select category box, dropdown menu on webpage
 .buttons {
     height: 30%;
     width: 50%;
-    background-color: green;
+    background-color: white;
     margin-left: 25%;
     margin-right: 25%;
+    border: 5px solid black;
+}
+
+.questionBox {
+    height: 70%;
+    width: 100%;
 }
 
 .answers {
-    background-color: beige;
-    border: 5px solid black;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -87,8 +97,6 @@ this is the select category box, dropdown menu on webpage
     width: 20;
     align-self: flex-end;
 }
-
-
 
 
 .title {
