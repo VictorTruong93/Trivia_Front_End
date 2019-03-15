@@ -5,6 +5,7 @@ let answers = [];
 
 function getData(url){
     fetch(url)
+
         .then(function(response){
             let data = response.json();
             return data;
@@ -93,4 +94,5 @@ function drawQuestionsToPage(grabQuestion) {
 //     // console.log(questionDiv);
 //     questionDiv.textContent = triviaData[0];
 // };
+
 
