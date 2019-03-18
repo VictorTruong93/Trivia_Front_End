@@ -1,13 +1,18 @@
-let scienceURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=11&difficulty=hard&type=multiple";
+
+let scienceURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=17&difficulty=easy&type=multiple`;
+
+
 let score = 0;
 let answers = [];
+let userAnswer = "";
+
 
 function getData(url){
     fetch(url)
 
-        .then(function(response){
-            let data = response.json();
-            return data;
+    .then(function(response){
+        let data = response.json();
+        return data;
         })
         .then(accumulateData)
         .then(shuffle)
@@ -40,18 +45,18 @@ function drawQuestionsToPage(grabQuestion) {
 //the Fisher-Yates Shuffle function!
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-  
+
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
+
+    // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
     }
     
     console.log(array);
@@ -68,35 +73,25 @@ function randomAssign (array){
     radioD.textContent = he.decode(array[3]);
 }
 
+function storeUserAnswer(){  
+    userAnswer = event.target.textContent
+    console.log(userAnswer)
+}
 
 function submitAndScore(){
-    let userAnswer = "";
-    userAnswer = document.addEventListener("click", document.querySelector("[data-A]").textContent);
-    userAnswer = document.addEventListener("click", document.querySelector("[data-B]").textContent);
-    userAnswer = document.addEventListener("click", document.querySelector("[data-C]").textContent);
-    userAnswer = document.addEventListener("click", document.querySelector("[data-D]").textContent);
     if(userAnswer === answers[3]){
-        score = score+1;
+
+        score += 1;
         let newScore = document.querySelector('[data-score]');
-        newScore.textContent = score;
-    }else if(userAnswer === answers[3]){
-        score = score+1;
-        let newScore = document.querySelector('[data-score]');
-        newScore.textContent = score;
-    }else if(userAnswer === answers[3]){
-        score = score+1;
-        let newScore = document.querySelector('[data-score]');
-        newScore.textContent = score;
-    }else if(userAnswer === answers[3]){
-        score = score+1;
-        let newScore = document.querySelector('[data-score]');
-        newScore.textContent = score;
+        newScore.textContent = score
     }else{
-        alert('Wrong!');
+        alert(`Wrong! The correct answer is ${answers[3]}!`);
+        score -= 1;
+        if (score === -1) {
+            score = 0;
+        }
+        let newScore = document.querySelector('[data-score]');
+        newScore.textContent = score
     }
     getData(scienceURL);
 }
-
-
-
-

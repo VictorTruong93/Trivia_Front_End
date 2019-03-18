@@ -18,7 +18,7 @@
                 <!-- might remove "Any Category later, issue with fetch URL ref. Chris" -->
                 <!-- categories are alphabetized, number value is still same as API values -->
                 <option value="any">Any Category</option>  optional(issues with api link)
-                <option value="9">General Knowledge</option>
+                <option class="GK" value="9">General Knowledge</option>
                 <option value="27">Animals</option>
                 <option value="25">Art</option>
                 <option value="26">Celebrities</option>
@@ -59,21 +59,17 @@
         <div class="question" data-question>Question:
             <!-- <div class="questionBox" data-question></div> -->
         </div>
-        <div class="answers" data-answer>
+        <div class="answers" data-answer onclick="storeUserAnswer()">
 
 
-            <div class="buttonA" data-A>
-            </div>
-            <div class="buttonB" data-B>
-            </div>
-            <div class="buttonC" data-C>
-            </div>
-            <div class="buttonD" data-D>
-            </div>
+
+            <div class="buttonA" data-A></div>
+            <div class="buttonB" data-B></div>
+            <div class="buttonC" data-C></div>
+            <div class="buttonD" data-D></div>
             
-
             <div  class="Enter">
-                <button onclick="submitAndScore()">Submit</button>
+                <button class="submitButton" onclick="submitAndScore()">Submit</button>
 
             </div>
         </div>
