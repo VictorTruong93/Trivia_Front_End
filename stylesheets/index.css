@@ -33,7 +33,7 @@ this is the select category box, dropdown menu on webpage
 .trivia-box {
     height: 80%;
     width: 100%;
-    background-image: url("trivia.jpg");
+    background-image: url("https://picsum.photos/200/300/?random");
     display: flex;
     flex-direction: column;
     justify-content: space-around;
