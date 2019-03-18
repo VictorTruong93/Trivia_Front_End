@@ -95,6 +95,7 @@ function submitAndScore(){
     }
     getData(generalURL);
 }
+
 function changeCategory() {
     let newCategory = document.getElementById("select-category");
     let selectedValue = newCategory[newCategory.selectedIndex].value;
@@ -102,5 +103,7 @@ function changeCategory() {
     getData(generalURL);
 }
 
-
+for (var link of document.querySelectorAll("link[rel=stylesheet]")) {
+    link.href = link.href.replace(/\?.*|$/, "?ts=" + new Date().getTime())
+  }
 
