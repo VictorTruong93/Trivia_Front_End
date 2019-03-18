@@ -40,7 +40,7 @@ this is the select category box, dropdown menu on webpage
 }
 
 .question,
-.answers,
+/* .answers, */
 .buttons {
     height: 30%;
     width: 50%;
@@ -48,6 +48,8 @@ this is the select category box, dropdown menu on webpage
     margin-left: 25%;
     margin-right: 25%;
     border: 5px solid black;
+    padding: 5px;
+    border-radius: 10%;
 }
 
 .questionBox {
@@ -55,49 +57,61 @@ this is the select category box, dropdown menu on webpage
     width: 100%;
 }
 
+.question {
+    text-align: center;
+}
+
 .answers {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    width: 50%;
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 5px solid black;
+    padding: 5px;
+    border-radius: 10%;
 }
 
-.buttonA {
-    height:25%;
-    width: 100%;
-    background: cyan;
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: flex-start;
-    /* margin: 25%; */
-}
-.buttonB {
-    height:25%;
-    width: 100%;
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: flex-start;
-}
-.buttonC {
-    height:25%;
-    width: 100%;
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: flex-start;
-}
+.buttonA,
+.buttonB,
+.buttonC,
 .buttonD {
-    height:25%;
-    width: 100%;
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: flex-start;
+    margin: 5px;
+    padding:15px 25px;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    color: orange;
+    background-color: blue;
+    border: none;
+    border-radius: 15px;
+    /* box-shadow: 0 9px #999; */
 }
 
-.Enter {
-    height: 20%;
-    width: 20;
-    align-self: flex-end;
+.buttonA:hover,
+.buttonB:hover,
+.buttonC:hover,
+.buttonD:hover {
+    /* background-color: aqua; */
+    /* outline: 2px solid black; */
+    border-radius: 15px;
+    opacity: 0.7;
+    cursor: pointer;
+    
 }
 
+.buttonA:active, 
+.buttonB:active, 
+.buttonC:active, 
+.buttonD:active {
+    transform: translateY(4px);
+}
+
+
+
+
+.input[type="submit"] {
+    cursor: pointer;
+}
 
 .title {
     height: 10%;
