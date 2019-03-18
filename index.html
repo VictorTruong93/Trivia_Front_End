@@ -43,33 +43,45 @@
                 <option value="21">Sports</option>
                 <option value="28">Vehicles</option>
             </select>
+            <select class="translate-selector">
+                <option value="1">English</option>
+                <option value="2">Language 2</option>
+                <option value="3">Language 3</option>
+                <option value="4">Language 4</option>
+                <option value="5">Language 5</option>
+            </select>
+            <div class="translate-button">
+                <input type="submit" value="Translate">
+            </div>
         </div>
     <div class="trivia-box">
-        <div class="question">Question:
-            <div class="questionBox"></div>
-        </div>
-        <div class="answers">Select Answer:
 
-            <div class="buttonA">
-                <input type="radio" name="choice">A<br>
+        <div class="question" data-question>Question:
+            <!-- <div class="questionBox" data-question></div> -->
+        </div>
+        <div class="answers" data-answer>
+
+            <div class="buttonA" data-A>
+                <!-- <input type="radio" name="choice"><p data-A></p> -->
             </div>
-            <div class="buttonB">
-                <input type="radio" name="choice">B<br>
+            <div class="buttonB" data-B>
+                <!-- <input type="radio" name="choice"><p data-B></p> -->
             </div>
-            <div class="buttonC">
-                <input type="radio" name="choice">C<br>
+            <div class="buttonC" data-C>
+                <!-- <input type="radio" name="choice"><p data-C></p> -->
             </div>
-            <div class="buttonD">
-                <input type="radio" name="choice">D<br>
+            <div class="buttonD" data-D>
+                <!-- <input type="radio" name="choice"><p data-D></p> -->
             </div>
             
-            <div  class="Enter">
+            
+            
+        </div>
+        <div class="buttons">Translate Submit Score:
+            <div class="Enter">
                 <input type="submit" value="Submit">
             </div>
-            
-
         </div>
-        <div class="buttons">Translate Submit Score:</div>
     </div>
 
     <script src="scripts/index.js"></script>
