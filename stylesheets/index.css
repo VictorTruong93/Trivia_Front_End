@@ -44,7 +44,7 @@ this is the select category box, dropdown menu on webpage
 .buttons {
     height: 30%;
     width: 50%;
-    background-color: white;
+    background: rgba(204, 204, 204, 0.5);
     margin-left: 25%;
     margin-right: 25%;
     border: 5px solid black;
@@ -63,7 +63,7 @@ this is the select category box, dropdown menu on webpage
 
 .answers {
     width: 50%;
-    background-color: white;
+    background: rgba(204, 204, 204, 0.5);
     margin-left: 25%;
     margin-right: 25%;
     border: 5px solid black;
@@ -80,8 +80,8 @@ this is the select category box, dropdown menu on webpage
     font-size: 20px;
     text-align: center;
     outline: none;
-    color: orange;
-    background-color: blue;
+    color: black;
+    /* background-color: rgba(204, 204, 204, 0.7); */
     border: none;
     border-radius: 15px;
     transition: 0.3s;
@@ -95,8 +95,8 @@ this is the select category box, dropdown menu on webpage
     border-radius: 15px;
     opacity: 0.7;
     cursor: pointer;
-    background-color: orange;
-    color: blue;
+    background-color: rgb(255, 255, 0);
+    color: rgb(0, 128, 68);
 }
 
 .buttonA:active, 
