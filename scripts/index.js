@@ -1,6 +1,6 @@
 let scienceURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=17&difficulty=easy&type=multiple";
 
-let data = [];
+let score = 0;
 let answers = [];
 
 function getData(url){
@@ -70,8 +70,37 @@ function randomAssign (array){
 }
 
 
+function submitAndScore(){
 
-
+    if(document.querySelector("[data-A]").textContent === answers[3]){
+        // document.getElementsByClassName("score") += 1;
+        score = score+1;
+        let newScore = document.querySelector('[data-score]');
+        newScore.textContent = score
+        // getData(url);
+    }else if(document.querySelector("[data-B]").textContent === answers[3]){
+        // document.getElementsByClassName("score") += 1;
+        score = score+1;
+        let newScore = document.querySelector('[data-score]');
+        newScore.textContent = score
+        // getData();
+    }else if(document.querySelector("[data-C]").textContent === answers[3]){
+        // document.getElementsByClassName("score") += 1;
+        score = score+1;
+        let newScore = document.querySelector('[data-score]');
+        newScore.textContent = score
+        // getData();
+    }else if(document.querySelector("[data-D]").textContent === answers[3]){
+        // document.getElementsByClassName("score") += 1;
+        score = score+1;
+        let newScore = document.querySelector('[data-score]');
+        newScore.textContent = score
+        // getData();
+    }else{
+        alert('Wrong!');
+    }
+    getData(scienceURL);
+}
 
 
 
