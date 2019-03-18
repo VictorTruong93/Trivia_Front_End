@@ -36,37 +36,5 @@ function drawQuestionsToPage(grabQuestion) {
     questionBoxDiv.textContent= `Question: ${grabQuestion.question}`;
     questionDiv.append(questionBoxDiv);
 
-}
-
-//the Fisher-Yates Shuffle function!
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-    }
-    
-    console.log(array);
-    return array;
-}
-function randomAssign (array){
-    let radioA = document.querySelector("[data-A]")
-    radioA.textContent = array[0]
-    let radioB = document.querySelector("[data-B]")
-    radioB.textContent = array[1]
-    let radioC = document.querySelector("[data-C]")
-    radioC.textContent = array[2]
-    let radioD = document.querySelector("[data-D]")
-    radioD.textContent = array[3]
-}
 
 
