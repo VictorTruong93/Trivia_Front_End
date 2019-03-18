@@ -27,6 +27,17 @@ function accumulateData(grabData) {
     return [...answers]
 }
 
+
+function drawQuestionsToPage(grabQuestion) {
+    let questionDiv = document.querySelector('[data-question]');
+    questionDiv.textContent='';
+    const questionBoxDiv = document.createElement('div');
+    
+    questionBoxDiv.textContent= `Question: ${grabQuestion.question}`;
+    questionDiv.append(questionBoxDiv);
+    
+}
+
 function answerAssign (){
     let radioA = document.querySelector("[data-A]")
     radioA.textContent = answers[0]
@@ -37,17 +48,6 @@ function answerAssign (){
     let radioD = document.querySelector("[data-D]")
     radioD.textContent = answers[3]
 }
-
-function drawQuestionsToPage(grabQuestion) {
-    let questionDiv = document.querySelector('[data-question]');
-    questionDiv.textContent='';
-    const questionBoxDiv = document.createElement('div');
-
-    questionBoxDiv.textContent= `Question: ${grabQuestion.question}`;
-    questionDiv.append(questionBoxDiv);
-
-}
-
 //the Fisher-Yates Shuffle function!
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
