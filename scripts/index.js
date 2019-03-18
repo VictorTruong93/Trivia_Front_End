@@ -71,26 +71,30 @@ function randomAssign (array){
 
 
 function submitAndScore(){
-
-    if(document.querySelector("[data-A]").textContent === answers[3]){
+    let userAnswer = "";
+    userAnswer = document.addEventListener("click", document.querySelector("[data-A]").textContent);
+    userAnswer = document.addEventListener("click", document.querySelector("[data-B]").textContent);
+    userAnswer = document.addEventListener("click", document.querySelector("[data-C]").textContent);
+    userAnswer = document.addEventListener("click", document.querySelector("[data-D]").textContent);
+    if(userAnswer === answers[3]){
         // document.getElementsByClassName("score") += 1;
         score = score+1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
         // getData(url);
-    }else if(document.querySelector("[data-B]").textContent === answers[3]){
+    }else if(userAnswer === answers[3]){
         // document.getElementsByClassName("score") += 1;
         score = score+1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
         // getData();
-    }else if(document.querySelector("[data-C]").textContent === answers[3]){
+    }else if(userAnswer === answers[3]){
         // document.getElementsByClassName("score") += 1;
         score = score+1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
         // getData();
-    }else if(document.querySelector("[data-D]").textContent === answers[3]){
+    }else if(userAnswer === answers[3]){
         // document.getElementsByClassName("score") += 1;
         score = score+1;
         let newScore = document.querySelector('[data-score]');
