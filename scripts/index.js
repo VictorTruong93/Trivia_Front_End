@@ -27,6 +27,17 @@ function accumulateData(grabData) {
     return [...answers]
 }
 
+function answerAssign (){
+    let radioA = document.querySelector("[data-A]")
+    radioA.textContent = answers[0]
+    let radioB = document.querySelector("[data-B]")
+    radioB.textContent = answers[1]
+    let radioC = document.querySelector("[data-C]")
+    radioC.textContent = answers[2]
+    let radioD = document.querySelector("[data-D]")
+    radioD.textContent = answers[3]
+}
+
 function drawQuestionsToPage(grabQuestion) {
     let questionDiv = document.querySelector('[data-question]');
     questionDiv.textContent='';
