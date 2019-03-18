@@ -2,13 +2,14 @@ let scienceURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com
 
 let score = 0;
 let answers = [];
+let userAnswer = "";
 
 function getData(url){
     fetch(url)
-
-        .then(function(response){
-            let data = response.json();
-            return data;
+    
+    .then(function(response){
+        let data = response.json();
+        return data;
         })
         .then(accumulateData)
         .then(shuffle)
@@ -70,13 +71,11 @@ function randomAssign (array){
     radioD.textContent = array[3]
 }
 
-
+function storeUserAnswer(){  
+    userAnswer = event.target.textContent
+    console.log(userAnswer)
+}
 function submitAndScore(){
-    let userAnswer = "";
-    userAnswer = document.addEventListener("click", document.querySelector("[data-A]").textContent);
-    userAnswer = document.addEventListener("click", document.querySelector("[data-B]").textContent);
-    userAnswer = document.addEventListener("click", document.querySelector("[data-C]").textContent);
-    userAnswer = document.addEventListener("click", document.querySelector("[data-D]").textContent);
     if(userAnswer === answers[3]){
         // document.getElementsByClassName("score") += 1;
         score = score+1;
@@ -106,7 +105,3 @@ function submitAndScore(){
     }
     getData(scienceURL);
 }
-
-
-
-
