@@ -12,6 +12,7 @@ function getData(url){
         })
         .then(accumulateData)
         .then(shuffle)
+        .then(randomAssign)
 }
 
 
@@ -52,20 +53,21 @@ function shuffle(array) {
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
-      let radioA = document.querySelector("[data-A]")
-        radioA.textContent = array[0]
-        let radioB = document.querySelector("[data-B]")
-        radioB.textContent = array[1]
-        let radioC = document.querySelector("[data-C]")
-        radioC.textContent = array[2]
-        let radioD = document.querySelector("[data-D]")
-        radioD.textContent = array[3]
     }
     
     console.log(array);
     return array;
 }
-
+function randomAssign (array){
+    let radioA = document.querySelector("[data-A]")
+    radioA.textContent = array[0]
+    let radioB = document.querySelector("[data-B]")
+    radioB.textContent = array[1]
+    let radioC = document.querySelector("[data-C]")
+    radioC.textContent = array[2]
+    let radioD = document.querySelector("[data-D]")
+    radioD.textContent = array[3]
+}
 
 
 
