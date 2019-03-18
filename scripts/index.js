@@ -75,33 +75,32 @@ function storeUserAnswer(){
     userAnswer = event.target.textContent
     console.log(userAnswer)
 }
+
+
+function userToggle(selection) {
+
+}
+
+
 function submitAndScore(){
     if(userAnswer === answers[3]){
-        // document.getElementsByClassName("score") += 1;
         score = score+1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
-        // getData(url);
     }else if(userAnswer === answers[3]){
-        // document.getElementsByClassName("score") += 1;
         score = score+1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
-        // getData();
     }else if(userAnswer === answers[3]){
-        // document.getElementsByClassName("score") += 1;
         score = score+1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
-        // getData();
     }else if(userAnswer === answers[3]){
-        // document.getElementsByClassName("score") += 1;
         score = score+1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
-        // getData();
     }else{
-        alert('Wrong!');
+        alert(`Wrong! The correct answer is ${answers[3]}!`);
     }
     getData(scienceURL);
 }
