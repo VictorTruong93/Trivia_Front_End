@@ -111,3 +111,6 @@ function changeCategory() {
     generalURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=${selectedValue}&type=multiple`;
     getData(generalURL);
 }
+
+
+
