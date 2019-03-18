@@ -1,4 +1,6 @@
+
 let scienceURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=17&difficulty=easy&type=multiple`;
+
 
 let score = 0;
 let answers = [];
@@ -34,11 +36,10 @@ function drawQuestionsToPage(grabQuestion) {
     let questionDiv = document.querySelector('[data-question]');
     questionDiv.textContent='';
     const questionBoxDiv = document.createElement('div');
-
-    questionBoxDiv.textContent= `Question: ${grabQuestion.question}`;
+    let rawQ = grabQuestion.question
+    // uses he.decode to display XML special characters
+    questionBoxDiv.textContent= `Question: ${he.decode(rawQ)}`;
     questionDiv.append(questionBoxDiv);
-
-
 }
 
 //the Fisher-Yates Shuffle function!
@@ -62,14 +63,14 @@ function shuffle(array) {
     return array;
 }
 function randomAssign (array){
-    let radioA = document.querySelector("[data-A]")
-    radioA.textContent = array[0]
-    let radioB = document.querySelector("[data-B]")
-    radioB.textContent = array[1]
-    let radioC = document.querySelector("[data-C]")
-    radioC.textContent = array[2]
-    let radioD = document.querySelector("[data-D]")
-    radioD.textContent = array[3]
+    let radioA = document.querySelector("[data-A]");
+    radioA.textContent = he.decode(array[0]);
+    let radioB = document.querySelector("[data-B]");
+    radioB.textContent = he.decode(array[1]);
+    let radioC = document.querySelector("[data-C]");
+    radioC.textContent = he.decode(array[2]);
+    let radioD = document.querySelector("[data-D]");
+    radioD.textContent = he.decode(array[3]);
 }
 
 function storeUserAnswer(){  
@@ -77,11 +78,9 @@ function storeUserAnswer(){
     console.log(userAnswer)
 }
 
-
-
-
 function submitAndScore(){
     if(userAnswer === answers[3]){
+
         score += 1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
