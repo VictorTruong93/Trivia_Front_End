@@ -1,5 +1,5 @@
 
-let scienceURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=17&difficulty=easy&type=multiple`;
+let generalURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=9&type=multiple";
 
 
 let score = 0;
@@ -93,9 +93,17 @@ function submitAndScore(){
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
     }
-    getData(scienceURL);
+    getData(generalURL);
+}
+
+function changeCategory() {
+    let newCategory = document.getElementById("select-category");
+    let selectedValue = newCategory[newCategory.selectedIndex].value;
+    generalURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=${selectedValue}&type=multiple`;
+    getData(generalURL);
 }
 
 for (var link of document.querySelectorAll("link[rel=stylesheet]")) {
     link.href = link.href.replace(/\?.*|$/, "?ts=" + new Date().getTime())
   }
+
