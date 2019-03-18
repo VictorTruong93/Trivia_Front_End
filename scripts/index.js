@@ -97,9 +97,13 @@ function submitAndScore(){
 }
 
 function changeCategory() {
+    function changeDifficulty(){
+        let newDifficulty = document.getElementById("difficulty")
+        let selectedDifficulty = newDifficulty[newDifficulty.selectedIndex].value
+    }
     let newCategory = document.getElementById("select-category");
     let selectedValue = newCategory[newCategory.selectedIndex].value;
-    generalURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=${selectedValue}&type=multiple`;
+    generalURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=${selectedValue}&difficulty${changeDifficulty}&type=multiple`;
     getData(generalURL);
 }
 
