@@ -206,6 +206,13 @@ this is the select category box, dropdown menu on webpage
 
 @media screen and (max-width: 768px) {
 
+    html, 
+    body {
+        overflow-y: scroll;
+        min-height: 800px;
+    }
+
+
     .questionAndScore {
         height: 30%;
         display: flex;
