@@ -1,5 +1,6 @@
 
-let generalURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=9&type=multiple";
+// no need for URL global variable, changeCategory function generates URL
+// let generalURL = "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple";
 
 
 let score = 0;
@@ -36,8 +37,8 @@ function drawQuestionsToPage(grabQuestion) {
     let questionDiv = document.querySelector('[data-question]');
     questionDiv.textContent='';
     const questionBoxDiv = document.createElement('div');
-    let rawQ = grabQuestion.question
-    // uses he.decode to display XML special characters
+    let rawQ = grabQuestion.question;
+    // uses he.decode to display XML special characters 
     questionBoxDiv.textContent= `Question: ${he.decode(rawQ)}`;
     questionDiv.append(questionBoxDiv);
 }
@@ -74,7 +75,7 @@ function randomAssign (array){
 }
 
 function storeUserAnswer(){  
-    userAnswer = event.target.textContent
+    userAnswer = event.target.textContent;
     console.log(userAnswer)
 }
 
@@ -85,25 +86,31 @@ function submitAndScore(){
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
     }else{
-        alert(`Wrong! The correct answer is ${answers[3]}!`);
+        alert(`Wrong! The correct answer is ${he.decode(answers[3])}!`);
         score -= 1;
         if (score === -1) {
             score = 0;
         }
         let newScore = document.querySelector('[data-score]');
-        newScore.textContent = score
+        newScore.textContent = score;
     }
     getData(generalURL);
 }
 
 function changeCategory() {
-    function changeDifficulty(){
-        let newDifficulty = document.getElementById("difficulty")
-        let selectedDifficulty = newDifficulty[newDifficulty.selectedIndex].value
-    }
+    
+    let newDifficulty = document.getElementById("difficulty")
+    let selectedDifficulty = newDifficulty[newDifficulty.selectedIndex].value;
     let newCategory = document.getElementById("select-category");
     let selectedValue = newCategory[newCategory.selectedIndex].value;
-    generalURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=${selectedValue}&difficulty${changeDifficulty}&type=multiple`;
+    generalURL = `https://opentdb.com/api.php?amount=1&category=${selectedValue}&difficulty=${selectedDifficulty}&type=multiple`;
+
+    return generalURL;
+
+}
+
+function userInitiate (){
+    changeCategory()
     getData(generalURL);
 }
 
