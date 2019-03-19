@@ -5,7 +5,7 @@
 
 let score = 0;
 let answers = [];
-let userAnswer = "";
+// let userAnswer = ""; not needed, userAnswer defined in function.
 
 
 function getData(url){
@@ -76,7 +76,8 @@ function randomAssign (array){
 
 function storeUserAnswer(){  
     userAnswer = event.target.textContent;
-    console.log(userAnswer)
+    console.log(userAnswer);
+    return userAnswer;
 }
 
 function submitAndScore(){
