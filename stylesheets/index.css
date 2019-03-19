@@ -154,6 +154,7 @@ this is the select category box, dropdown menu on webpage
 }
 
 .submitButton {
+    width: 25%;
     background-color: black;
     border-radius: 15px;
     color: white;
@@ -162,6 +163,8 @@ this is the select category box, dropdown menu on webpage
     display: inline-block;
     font-size: 15px;
     transition: 0.3s;
+    margin-left: 37%;
+
 }
 
 .submitButton:hover {
@@ -253,6 +256,7 @@ this is the select category box, dropdown menu on webpage
         margin-bottom: 10px;
         background-color: rgba(0, 0, 0, 0);
         border: 5px solid rgba(0, 0, 0, 0);
+        font-size: 20px;
     }
 
     .category {
