@@ -9,6 +9,9 @@ let answers = [];
 
 
 function getData(url){
+    userAnswer = '';
+    let answerDisplay = document.querySelector("[data-selectedAnswer]");
+    answerDisplay.textContent = userAnswer;
     fetch(url)
 
     .then(function(response){
@@ -76,6 +79,8 @@ function randomAssign (array){
 
 function storeUserAnswer(){  
     userAnswer = event.target.textContent;
+    let answerDisplay = document.querySelector("[data-selectedAnswer]");
+    answerDisplay.textContent = userAnswer;
     console.log(userAnswer);
     return userAnswer;
 }

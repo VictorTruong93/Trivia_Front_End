@@ -36,11 +36,11 @@ this is the select category box, dropdown menu on webpage
     background-image: url("https://picsum.photos/200/300/?random");
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
 }
 
 .questionAndScore {
     display: flex;
+    margin-top: 8px;
 }
 
 .question {
@@ -59,21 +59,58 @@ display: inline-block
 }
 
 .score {
-    height: 100px;
+    height: 95px;
     width: 10%;
     text-align: center;
     border: 3px solid black;
-    background: white;
-    /* float: right; */
+    background: rgba(204, 204, 204, 0.9);
     display: inline-block;
     margin-right: 5%;
+    border-radius: 15px;
+}
+
+.displayScore {
+    height: 50px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background: rgba(250, 250, 250, 0.9);
+    border: 5px solid black;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.displayAnswers {
+    height: 100px;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background: rgba(204, 204, 204, 0.8);
+    border: 5px solid black;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 120%;
+}
+
+.showAnswers {
+    height: 35px;
+    width: 50%;
+    border: 5px solid black;
+    background-color: rgba(250, 250, 250, 0.9);
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 25%;
+    border-radius: 15px;
+    font-size: 80%;
 }
 
 .answers {
-    height: 60%;
+    height: 280px;
     width: 50%;
     background: rgba(204, 204, 204, 0.8);
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 25%;
     margin-right: 25%;
     border: 5px solid black;
@@ -86,6 +123,7 @@ display: inline-block
 .buttonB,
 .buttonC,
 .buttonD {
+    height: 53px;
     margin: 5px;
     padding:15px 25px;
     font-size: 20px;
