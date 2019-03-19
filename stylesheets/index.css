@@ -18,16 +18,16 @@ this is the select category box, dropdown menu on webpage
 ==========*/
 
 .select-box {
-    background-color: aqua; /* color just for highlight areas, can be made neutral later */
+    background-color: black;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .headTitle {
-    display: flex;
-    justify-content: center;
     color: white;
+    text-align: center;
+    font-style: italic;
 }
 
 .trivia-box {
@@ -40,11 +40,10 @@ this is the select category box, dropdown menu on webpage
 }
 
 .question,
-/* .answers, */
 .buttons {
     height: 30%;
     width: 50%;
-    background: rgba(204, 204, 204, 0.5);
+    background: rgba(204, 204, 204, 0.8);
     margin-left: 25%;
     margin-right: 25%;
     border: 5px solid black;
@@ -59,11 +58,12 @@ this is the select category box, dropdown menu on webpage
 
 .question {
     text-align: center;
+    font-size: 125%;
 }
 
 .answers {
     width: 50%;
-    background: rgba(204, 204, 204, 0.5);
+    background: rgba(204, 204, 204, 0.8);
     margin-left: 25%;
     margin-right: 25%;
     border: 5px solid black;
@@ -95,7 +95,8 @@ this is the select category box, dropdown menu on webpage
     border-radius: 15px;
     opacity: 0.7;
     cursor: pointer;
-    background-color: rgb(255, 255, 0);
+    /* background-color: rgba(255, 255, 0, 1); */
+    background-color: rgba(255, 68, 0, 0.8);
     color: rgb(0, 128, 68);
 }
 
@@ -129,10 +130,3 @@ this is the select category box, dropdown menu on webpage
     cursor: pointer;
 }
 
-.title {
-    height: 10%;
-    width: 100%;
-    background-color: blue;
-    display: flex;
-    flex-direction: center;
-}
