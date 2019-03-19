@@ -1,5 +1,5 @@
 
-let generalURL = "https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=9&difficultyeasy%type=multiple";
+let generalURL = "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple";
 
 
 let score = 0;
@@ -103,7 +103,7 @@ function changeCategory() {
     
     let newCategory = document.getElementById("select-category");
     let selectedValue = newCategory[newCategory.selectedIndex].value;
-    generalURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=${selectedValue}&difficulty${selectedDifficulty}&type=multiple`;
+    generalURL = `https://my-little-cors-proxy.herokuapp.com/https://opentdb.com/api.php?amount=1&category=${selectedValue}&difficulty=${selectedDifficulty}&type=multiple`;
 
 
 }
