@@ -81,7 +81,6 @@ function storeUserAnswer(){
 
 function submitAndScore(){
     if(userAnswer === answers[3]){
-
         score += 1;
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
@@ -110,11 +109,12 @@ function changeCategory() {
 }
 
 function userInitiate (){
+    
     changeCategory()
     getData(generalURL);
 }
 
 for (var link of document.querySelectorAll("link[rel=stylesheet]")) {
     link.href = link.href.replace(/\?.*|$/, "?ts=" + new Date().getTime())
-  }
+}
 
