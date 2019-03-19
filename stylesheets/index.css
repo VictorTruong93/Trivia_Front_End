@@ -196,13 +196,15 @@ this is the select category box, dropdown menu on webpage
     display: inline-block;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-height:685px) {
+    html, 
+    body {
+        overflow-y: scroll;
+        min-height: 800px;
+    }
 
 }
 
-@media screen and (min-width: 768px){
-
-}
 
 @media screen and (max-width: 768px) {
 
