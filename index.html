@@ -64,13 +64,17 @@
                 <p data-score></p>
             </div>
         </div>
+
+        <div class="displayAnswers">Your Answer:
+            <div class="showAnswers" data-selectedAnswer onclick="storeUserAnswer()"></div>
+        </div>
         <div class="answers" data-answer >
             <div class="buttonA" data-A onclick="storeUserAnswer()"></div>
             <div class="buttonB" data-B onclick="storeUserAnswer()"></div>
             <div class="buttonC" data-C onclick="storeUserAnswer()"></div>
             <div class="buttonD" data-D onclick="storeUserAnswer()"></div>
             
-            <div  class="Enter">
+            <div  class="submitButtonLayout">
                 <button class="submitButton" onclick="submitAndScore()">Submit</button>
             </div>
         </div>
