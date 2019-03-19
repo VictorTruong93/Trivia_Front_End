@@ -39,7 +39,7 @@ function drawQuestionsToPage(grabQuestion) {
     const questionBoxDiv = document.createElement('div');
     let rawQ = grabQuestion.question;
     // uses he.decode to display XML special characters 
-    questionBoxDiv.textContent= `Question: ${he.decode(rawQ)}`;
+    questionBoxDiv.textContent= `${he.decode(rawQ)}`;
     questionDiv.append(questionBoxDiv);
 }
 
@@ -81,8 +81,8 @@ function storeUserAnswer(){
 
 function submitAndScore(){
     if(userAnswer === answers[3]){
-
         score += 1;
+        alert(`Great job! Your score is now ${score}!`)
         let newScore = document.querySelector('[data-score]');
         newScore.textContent = score
     }else{

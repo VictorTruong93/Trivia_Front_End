@@ -14,7 +14,7 @@
 <body>
         <h1 class="headTitle">TRIVIA</h1>
         <div class="select-box">
-            <select id="select-category" onchange="changeCategory()">
+            <select class="category" id="select-category" onchange="changeCategory()">
                 <!-- might remove "Any Category later, issue with fetch URL ref. Chris" -->
                 <!-- categories are alphabetized, number value is still same as API values -->
                 
@@ -45,20 +45,24 @@
                 <option value="28" class="my-category">Vehicles</option>
 
             </select>
-            <select  id="difficulty" onchange="changeCategory()">
+            <select class="level" id="difficulty" onchange="changeCategory()">
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
                 <option value="hard">Hard</option>
 
             </select>
             <div class="translate-button">
-                <input type="submit" value="New Question" onclick="userInitiate()">
+                <input class="newQuestion" type="submit" value="New Question" onclick="userInitiate()">
             </div>
         </div>
     <div class="trivia-box">
-
-        <div class="question" data-question>Question:
-            <!-- <div class="questionBox" data-question></div> -->
+        <div class="questionAndScore">
+            <div class="question">Question:
+                <div data-question></div>
+            </div>
+            <div class="score">Score:
+                <p data-score></p>
+            </div>
         </div>
         <div class="answers" data-answer onclick="storeUserAnswer()">
             <div class="buttonA" data-A></div>
@@ -68,12 +72,7 @@
             
             <div  class="Enter">
                 <button class="submitButton" onclick="submitAndScore()">Submit</button>
-
             </div>
-        </div>
-
-        <div class="buttons" >Score: 
-            <div data-score></div>
         </div>
     </div>
     <script src="scripts/he.js"></script>
