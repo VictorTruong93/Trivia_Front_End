@@ -34,7 +34,7 @@ this is the select category box, dropdown menu on webpage
 .trivia-box {
     height: 80%;
     width: 100%;
-    background-image: url("https://picsum.photos/200/300/?random");
+    background-image: url("https://picsum.photos/700/800/?random");
     display: flex;
     flex-direction: column;
 }
