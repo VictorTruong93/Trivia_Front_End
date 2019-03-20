@@ -121,7 +121,7 @@ function storeUserAnswer(){
 //it triggers when the user clickes the submit button 
 //then it increments the score accordingly
 function submitAndScore(){
-    if(userAnswer === answers[3]){
+    if(userAnswer === he.decode(answers[3])){
         score += 1;
         alert(`Great job! Your score is now ${score}!`)
         let newScore = document.querySelector('[data-score]');
